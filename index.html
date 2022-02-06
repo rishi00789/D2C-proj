@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.1.3/dist/lux/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.1.3/dist/lux/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="card mx-auto text-center" id="card-M" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Authentication</h5>
+          <p id='loginSuccess'></p>
+          <form id="lg-form">
+              <input type="text" id="lEmail" placeholder="Email" class="my-3">
+              <input type="password" id="lPass" placeholder="Password" class="mb-3">
+            <div class="d-flex justify-content-center">
+              <button type="submit" class="btn btn-primary" id="lg">Login</button>
+            </div>
+          </form>
+          <div class="d-flex justify-content-center">
+            <button id="logout" style="display: none;" class ="btn btn-primary">Logout</button>
+          </div>
+          <div class="d-flex justify-content-center">
+            <button type="text" id="createNusr" class="btn btn-dark mt-3" data-bs-toggle="modal" data-bs-target="#CreateUsr">Create a New account</button>
+          </div>
+          </div>
+        <!--MODAL-->
+        <div class="modal" id="CreateUsr">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Create a new account</h5>
+              </div>
+              <div class="modal-body">
+                <form id="usr-form">
+                  <input type="text" placeholder="Email" id="email" class="d-block w-100 text-center">
+                  <input type="password" placeholder="Password" id="pass" class="d-block w-100 text-center mt-3">
+                  <button type="button" class="btn btn-outline-dark mt-3" data-bs-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-primary mt-3" id="aceptU">Create User</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--MODAL-->
+        <!--MODAL Error-->
+        <div id="dis" class="modal">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Error</h5>
+                <button type="button" id="X">
+                  <span>&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p id="add"></p>
+              </div>
+                <button type="button" class="btn btn-dark close">Close</button>
+            </div>
+          </div>
+        </div>
+        <!--MODAL Error-->
+
+
+      </div>
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+
+      <!-- TODO: Add SDKs for Firebase products that you want to use
+          https://firebase.google.com/docs/web/setup#available-libraries -->
+          <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+
+      <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyBdv59aiMR5GIY4GWSZmRJQIdWKUbwczdo",
+          authDomain: "d2c-proj.firebaseapp.com",
+          databaseURL: "https://d2c-proj-default-rtdb.firebaseio.com",
+          projectId: "d2c-proj",
+          storageBucket: "d2c-proj.appspot.com",
+          messagingSenderId: "537640012447",
+          appId: "1:537640012447:web:5e9345253057edda70b0aa"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        
+      </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="index.js"></script>  
+  </body>
+</html>
