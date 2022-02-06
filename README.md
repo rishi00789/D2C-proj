@@ -1,1 +1,3 @@
 # D2C-proj
+
+Simple Firebase Auth Sign-In and Sign-Up using Javascript CDN
